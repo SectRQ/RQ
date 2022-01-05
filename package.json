@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "author": "Sect",
   "license": "ISC",
   "dependencies": {
@@ -17,5 +20,7 @@
     "libsodium-wrappers": "^0.7.9",
     "yt-search": "^2.10.3",
     "ytdl-core": "^4.9.2"
+  
   }
-}
+} 
+
