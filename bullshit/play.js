@@ -13,7 +13,7 @@
 // })
 
 // //Login to the Bot
-// client.login("OTI3NTM2NjUyNTA5OTI1NDI3.YdLp0g.WL9njmzhojKDNRmlr_coam9VIjc");
+// client.login(
 // //an array of all channels can be a database output too!
 // const Channels = ["849474227647283240"];
 // //Once the bot is ready join all channels and play the audio
