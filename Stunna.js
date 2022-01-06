@@ -90,7 +90,7 @@ client.on("messageCreate", async (message) => {
         new Discord.MessageEmbed()
           .setColor('#c4f835')
           .setTitle('Fucked  :clown:')
-          .setDescription(`<@${tMember.user.id} has been fucked by ${message.author.username}, but that nigga's pull out game STRONG.`)
+          .setDescription(`<@${tMember.user} has been fucked by ${message.author.username}, but that nigga's pull out game STRONG.`)
       ]
     })
   }
