@@ -90,7 +90,7 @@ client.on("messageCreate", async (message) => {
         new Discord.MessageEmbed()
           .setColor('#C0A6A7')
           .setTitle('Fucked  :clown:')
-          .setDescription(`${tMember.user} has been fucked by ${message.author.username}, but that nigga's pull out game STRONG.`)
+          .setDescription([`${tMember.user} has been fucked by ${message.author.username}, but that nigga's pull out game STRONG.`, `${tMember.user} gave ${message.author.username} herpes.`, `${tMember.user} GAVE ${message.author} AIDS LMFAO`, `${tMember.user} has been impregnated by ${message.author.username} :pregnant_woman::skin-tone-5:`, `${tMember.user} got raped by this lame ahh nigga called ${message.author.username} :skull:`])
       ]
     })
   }
