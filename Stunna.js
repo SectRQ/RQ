@@ -27,7 +27,7 @@ const status = (queue) =>
 // distube events
 distube.on("playSong", (queue, song) => {
   let playembed = new Discord.MessageEmbed()
-    .setColor("#c4f835")
+    .setColor("#C0A6A7")
     .setTitle(`:ghost:  Playing! `)
     .setThumbnail(song.thumbnail)
     .setDescription(`[${song.name}](${song.url})`)
@@ -38,7 +38,7 @@ distube.on("playSong", (queue, song) => {
 });
 distube.on("addSong", (queue, song) => {
   let playembed = new Discord.MessageEmbed()
-    .setColor("#c4f835")
+    .setColor("#C0A6A7")
     .setTitle(`:ghost:  Toegevoegd aan queue `)
     .setThumbnail(song.thumbnail)
     .setDescription(`[${song.name}](${song.url})`)
@@ -53,7 +53,7 @@ distube.on("addSong", (queue, song) => {
 });
 distube.on('addList', (queue, plalist) => {
   let playembed= new Discord.MessageEmbed()
-    .setColor("#c4f835")
+    .setColor("#C0A6A7")
     .setTitle(`:dragon_face:  PlayList toegevoegd aan Queue `)
     .setThumbnail(plalist.thumbnail)
     .setDescription(`[${plalist.name}](${plalist.url})`)
@@ -88,9 +88,9 @@ client.on("messageCreate", async (message) => {
     message.channel.send({
       embeds: [
         new Discord.MessageEmbed()
-          .setColor('#c4f835')
+          .setColor('#C0A6A7')
           .setTitle('Fucked  :clown:')
-          .setDescription(`<@${tMember.user} has been fucked by ${message.author.username}, but that nigga's pull out game STRONG.`)
+          .setDescription(`${tMember.user} has been fucked by ${message.author.username}, but that nigga's pull out game STRONG.`)
       ]
     })
   }
@@ -111,7 +111,7 @@ client.on("messageCreate", async (message) => {
       return message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setColor("#c4f835")
+            .setColor("#C0A6A7")
             .setDescription(`>>> Join een vc`)
             .setFooter(
               `By Sect`,
@@ -160,7 +160,7 @@ client.on("messageCreate", async (message) => {
     message.channel.send({
       embeds: [
         new Discord.MessageEmbed()
-          .setColor("#c4f835")
+          .setColor("#C0A6A7")
           .setTitle(`Song Skipped`)
           .setDescription(`Song veranderd door ${message.author}`)
           
@@ -180,7 +180,7 @@ client.on("messageCreate", async (message) => {
     message.channel.send({
       embeds: [
         new Discord.MessageEmbed()
-          .setColor("#c4f835")
+          .setColor("#C0A6A7")
           .setTitle(`Song Pause`)
           .setDescription(`Song Paused by ${message.author}`)
           
@@ -199,7 +199,7 @@ client.on("messageCreate", async (message) => {
     message.channel.send({
       embeds: [
         new Discord.MessageEmbed()
-          .setColor("#c4f835")
+          .setColor("#C0A6A7")
           .setTitle(`Song Resume`)
           .setDescription(`Song Resumed by ${message.author}`)
           .setFooter(`By Sect`)
@@ -222,7 +222,7 @@ client.on("messageCreate", async (message) => {
       message.channel.send({
         embeds: [
           new Discord.MessageEmbed()
-            .setColor('#c4f835')
+            .setColor('#C0A6A7')
             .setTitle(`Queue Of \`${message.guild.name}\``)
             .setDescription(`>>> ${embedsc.join("\n")}`.substr(0, 3000))
             .setFooter(`${queue.songs.length} Songs`, message.guild.iconURL({ dynamic: true }))
@@ -238,7 +238,7 @@ client.on("messageCreate", async (message) => {
     let song = queue.songs[0];
     let embed = new Discord.MessageEmbed()
       .setAuthor(`Now Playing`, song.thumbnail)
-      .setColor('#c4f835')
+      .setColor('#C0A6A7')
       .setTitle(song.name)
       .setURL(song.url)
       .setThumbnail(song.thumbnail)
