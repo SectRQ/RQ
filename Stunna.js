@@ -84,20 +84,20 @@ client.on("messageCreate", async (message) => {
   } else if (cmd === 'slecht' | cmd === 'idk'){
       message.channel.send('Dats fucked up man')
   } else if (cmd === 'fuck'){
-    let tMember = message.mentions.members.first();
-    let answers = [
-      `${tMember.user} has been fucked by ${message.author.username}, but that nigga's pull out game STRONG.`,
-      `${tMember.user} gave ${message.author.username} herpes.`,
-      `${tMember.user} GAVE ${message.author} AIDS LMFAO`,
-      `${tMember.user} has been impregnated by ${message.author.username} :pregnant_woman::skin-tone-5:`,
-      `${tMember.user} got raped by this lame ahh nigga called ${message.author.username} :skull:`
+      let tMember = message.mentions.members.first();
+      let answers = [
+        `${tMember.user} has been fucked by ${message.author.username}, but that nigga's pull out game STRONG.`,
+       `${tMember.user} gave ${message.author.username} herpes.`,
+       `${tMember.user} GAVE ${message.author} AIDS LMFAO`,
+       `${tMember.user} has been impregnated by ${message.author.username} :pregnant_woman::skin-tone-5:`,
+       `${tMember.user} got raped by this lame ahh nigga called ${message.author.username} :skull:`
     ]
-    let randomA = answers[Math.floor(Math.random() * answers.length)];
+      let randomA = answers[Math.floor(Math.random() * answers.length)];
     message.channel.send({
       embeds: [
         new Discord.MessageEmbed()
           .setColor('#C0A6A7')
-          .setTitle('Fucked  :clown:')
+          .setTitle('Get fucked  :clown:  lol')
           .setDescription(randomA)
       ]
     })
