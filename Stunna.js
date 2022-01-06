@@ -31,7 +31,7 @@ distube.on("playSong", (queue, song) => {
     .setTitle(`:ghost:  Playing! `)
     .setThumbnail(song.thumbnail)
     .setDescription(`[${song.name}](${song.url})`)
-    .addField("Requested By", `${song.user}`, true)
+    .addField("Gevraagd door", `${song.user}`, true)
     .addField("Duration", `${song.formattedDuration.toString()}`, true)
     .setFooter(status(queue), song.user.displayAvatarURL({ dynamic: true }));
   queue.textChannel.send({ embeds: [playembed] });
@@ -42,17 +42,17 @@ distube.on("addSong", (queue, song) => {
     .setTitle(`:ghost:  Toegevoegd aan queue `)
     .setThumbnail(song.thumbnail)
     .setDescription(`[${song.name}](${song.url})`)
-    .addField("Requested By", `${song.user}`, true)
+    .addField("Gevraagd door", `${song.user}`, true)
     .addField("Duration", `${song.formattedDuration.toString()}`, true)
     .setFooter(
-      `Coded By Sect`,
+      `By Sect`,
       song.user.displayAvatarURL({ dynamic: true })
     );
 
   queue.textChannel.send({ embeds: [playembed] });
 });
 distube.on('addList', (queue, plalist) => {
-  let playembed = new Discord.MessageEmbed()
+  let playembed= new Discord.MessageEmbed()
     .setColor("#c4f835")
     .setTitle(`:dragon_face:  PlayList toegevoegd aan Queue `)
     .setThumbnail(plalist.thumbnail)
@@ -60,7 +60,7 @@ distube.on('addList', (queue, plalist) => {
     .addField("Gevraagd door", `${plalist.user}`, true)
     .addField("Tijdsduur", `${plalist.formattedDuration.toString()}`, true)
     .setFooter(
-      `Coded By Sect`,
+      `By Sect`,
       plalist.user.displayAvatarURL({ dynamic: true })
     );
 
@@ -74,6 +74,7 @@ client.on("messageCreate", async (message) => {
   )
     return;
 
+    ///////// NO MUSIC COMMANDS ////////////////////
   let args = message.content.slice(config.prefix.length).trim().split(" ");
   let cmd = args.shift()?.toLowerCase();
   if (cmd === 'talk'){
@@ -82,7 +83,20 @@ client.on("messageCreate", async (message) => {
       message.channel.send("Lekker man!")
   } else if (cmd === 'slecht' | cmd === 'idk'){
       message.channel.send('Dats fucked up man')
+  } else if (cmd === 'fuck'){
+    let tMember = message.mentions.members.first();
+    message.channel.send({
+      embeds: [
+        new Discord.MessageEmbed()
+          .setColor('#c4f835')
+          .setTitle('Fucked  :clown:')
+          .setDescription(`<@${tMember.user.id} has been fucked by ${message.author.username}, but that nigga's pull out game STRONG.`)
+      ]
+    })
   }
+  
+  
+  
   if (cmd === "ping") {
     message.channel.send(`>>> Ping :- \`${client.ws.ping}\``);
   
@@ -100,7 +114,7 @@ client.on("messageCreate", async (message) => {
             .setColor("#c4f835")
             .setDescription(`>>> Join een vc`)
             .setFooter(
-              `Coded By Sect`,
+              `By Sect`,
               message.author.displayAvatarURL({ dynamic: true })
             ),
         ],
@@ -124,9 +138,9 @@ client.on("messageCreate", async (message) => {
         embeds: [
           new Discord.MessageEmbed()
             .setColor("#c4f835")
-            .setDescription(`>>> Geef song naam of link noob`)
+            .setDescription(`>>> Geef song naam of link noobie`)
             .setFooter(
-              `Coded By Sect`,
+              `By Sect`,
               message.author.displayAvatarURL({ dynamic: true })
             ),
         ],
@@ -168,7 +182,7 @@ client.on("messageCreate", async (message) => {
         new Discord.MessageEmbed()
           .setColor("#c4f835")
           .setTitle(`Song Pause`)
-          .setDescription(`Song Paushed by ${message.author}`)
+          .setDescription(`Song Paused by ${message.author}`)
           
       ]
     })
@@ -188,7 +202,7 @@ client.on("messageCreate", async (message) => {
           .setColor("#c4f835")
           .setTitle(`Song Resume`)
           .setDescription(`Song Resumed by ${message.author}`)
-          .setFooter(`Coded by Sect`)
+          .setFooter(`By Sect`)
       ]
     })
   } else if (cmd === "queue" && 'q') {
