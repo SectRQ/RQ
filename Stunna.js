@@ -106,7 +106,7 @@ client.on("messageCreate", async (message) => {
   } else if (cmd === 'pee'){
     let tMember = message.mentions.members.first(); 
     let answers = [
-        `${message.member.username} how you get yo ass peed on by ${message.author.username} :man_facepalming::skin-tone-5: `,
+        `${tMember.user} how you get yo ass peed on by ${message.author.username} :man_facepalming::skin-tone-5: `,
         `${message.author.username} filled ${tMember.user} mouth with pee... (tasty tho)`,
         `${message.author.username} fr tried to pee on this nigga :skull:, fatherless behavior`,
   ]
