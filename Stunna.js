@@ -90,7 +90,9 @@ client.on("messageCreate", async (message) => {
         `${tMember.user} gave ${message.author.username} herpes.`,
         `${tMember.user} GAVE ${message.author} AIDS LMFAO`,
         `${tMember.user} has been impregnated by ${message.author.username} :pregnant_woman::skin-tone-5:`,
-        `${tMember.user} got raped by this lame ahh nigga called ${message.author.username} :skull:`
+        `${tMember.user} got raped by this lame ahh nigga called ${message.author.username} :skull:`,
+        `${message.author.username} quit the gayshit coon, get sum bitches.`,
+        `...`
     ]
       let randomA = answers[Math.floor(Math.random() * answers.length)];
     message.channel.send({
@@ -101,7 +103,23 @@ client.on("messageCreate", async (message) => {
           .setDescription(randomA)
       ]
     })
-  }
+  } else if (cmd === 'pee'){
+    let tMember = message.mentions.members.first(); 
+    let answers = [
+        `${message.member.username} how you get yo ass peed on by ${message.author.username} :man_facepalming::skin-tone-5: `,
+        `${message.author.username} filled ${tMember.user} mouth with pee... (tasty tho)`,
+        `${message.author.username} fr tried to pee on this nigga :skull:, fatherless behavior`,
+  ]
+    let randomA = answers[Math.floor(Math.random() * answers.length)];
+  message.channel.send({
+    embeds: [
+      new Discord.MessageEmbed()
+        .setColor('#C0A6A7')
+        .setTitle(':sweat_drops:')
+        .setDescription(randomA)
+    ]
+  })
+}
   
   
   
