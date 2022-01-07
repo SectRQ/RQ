@@ -4,16 +4,21 @@ const config = require("./config.json");
 const client = new Discord.Client({
   intents: 641,
 });
-
-const distube = new Distube(client, {
-  emitNewSongOnly: false,
-  searchSongs: 0,
+const { SpotifyPlugin } = require("@distube/spotify");
+const distube = new Distube(client, { searchSongs: false, emitNewSongOnly: true });
+new DisTube(client, {
+  searchSongs: 10,
+  emitNewSongOnly: true,
+  plugins: [new SpotifyPlugin()],
 });
 
 client.on("ready",  () => {
   console.log(`RQ is bijna ready`);
-  client.user.setActivity("I Love Youngboy", { type: "PLAYING" });
+  client.user.setActivity("Getting this bread", { type: "LISTENING TO" });
 });
+
+
+
 
 const status = (queue) =>
   `Volume: \`${queue.volume}%\` | Filter: \`${queue.filter || "Off"
