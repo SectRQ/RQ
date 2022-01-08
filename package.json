@@ -12,6 +12,7 @@
   "author": "Sect",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/spotify": "^2.220",
     "@discordjs/opus": "^0.7.0",
     "@discordjs/voice": "^0.7.5",
     "discord.js": "^13.5.0",
