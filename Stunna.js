@@ -5,7 +5,6 @@ const client = new Discord.Client({
   intents: 641,
 });
 const { SpotifyPlugin } = require("distube/spotify");
-const distube = new Distube(client, { searchSongs: false, emitNewSongOnly: true });
 const distube = new Distube(client, {
   searchSongs: 10,
   emitNewSongOnly: true,
