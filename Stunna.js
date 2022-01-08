@@ -4,7 +4,7 @@ const config = require("./config.json");
 const client = new Discord.Client({
   intents: 641,
 });
-const { SpotifyPlugin } = require("distube/spotify");
+const { SpotifyPlugin } = require("@distube/spotify");
 const distube = new Distube(client, {
   searchSongs: 10,
   emitNewSongOnly: true,
