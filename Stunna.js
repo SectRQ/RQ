@@ -8,7 +8,14 @@ const { SpotifyPlugin } = require("@distube/spotify");
 const distube = new Distube(client, {
   searchSongs: 10,
   emitNewSongOnly: true,
-  plugins: [new SpotifyPlugin()],
+});
+new SpotifyPlugin({
+  parallel: true,
+  emitEventsAfterFetching: false,
+  api: {
+    clientId: "SpotifyAppClientID",
+    clientSecret: "SpotifyAppClientSecret",
+  },
 });
 
 client.on("ready",  () => {
