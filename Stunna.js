@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const Distube = require("distube");
-const { SpotifyPlugin } = require("@distube/spotify");
+const { SpotifyPlugin } = require("spotify");
 const config = require("./config.json");
 const client = new Discord.Client({
   intents: 641,
