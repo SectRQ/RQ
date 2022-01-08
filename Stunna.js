@@ -236,7 +236,7 @@ client.on("messageCreate", async (message) => {
           .setFooter(`By Sect`)
       ]
     })
-  } else if (cmd === "queue" && 'q') {
+  } else if (cmd === "queue") {
     let queue = distube.getQueue(message.guild.id);
     let channel = message.member.voice.channel;
     if (!channel) {
