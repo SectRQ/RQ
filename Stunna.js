@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
-const Distube = require("distube").default;
+const Distube = require("distube");
+const { SpotifyPlugin } = require("distube-spotify");
 const config = require("./config.json");
 const client = new Discord.Client({
   intents: 641,
 });
-const { SpotifyPlugin } = require("distube-spotify");
 const distube = new Distube(client, {
   searchSongs: 10,
   emitNewSongOnly: true,
