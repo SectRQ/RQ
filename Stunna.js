@@ -52,7 +52,7 @@ distube.on("addSong", (queue, song) => {
   queue.textChannel.send({ embeds: [playembed] });
 });
 distube.on('addList', (queue, plalist) => {
-  let playembed= new Discord.MessageEmbed()
+  let playembed = new Discord.MessageEmbed()
     .setColor("#C0A6A7")
     .setTitle(`:dragon_face:  PlayList toegevoegd aan Queue `)
     .setThumbnail(plalist.thumbnail)
@@ -72,11 +72,14 @@ client.on("messageCreate", async (message) => {
     message.author.bot ||
     !message.content.startsWith(config.prefix)
   )
-    return;
+    return; 
 
     ///////// NO MUSIC COMMANDS ////////////////////
   let args = message.content.slice(config.prefix.length).trim().split(" ");
   let cmd = args.shift()?.toLowerCase();
+  while (cmd === 'rip'){
+    message.channel.send(`COPE HARDER`);
+   }
   if (cmd === 'talk'){
     message.channel.send(`Yo ${message.author}, hoe gaat het bro?`);
   } else if (cmd === 'goed' | cmd === 'good'){
@@ -118,9 +121,9 @@ client.on("messageCreate", async (message) => {
         .setTitle(':sweat_drops:')
         .setDescription(randomA)
     ]
-  })
+  }) 
 }
-  
+
   
   
   if (cmd === "ping") {
