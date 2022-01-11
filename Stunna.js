@@ -121,7 +121,8 @@ client.on("messageCreate", async (message) => {
     ]
   }) 
 } if (cmds === 'rip');{
-    message.channel.send(`COPE HARDER`)};
+    message.channel.send(`COPE HARDER`) 
+  };
    
     
 
