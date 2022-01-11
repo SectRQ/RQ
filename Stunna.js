@@ -77,7 +77,7 @@ client.on("messageCreate", async (message) => {
   
   let args = message.content.slice(config.prefix.length).trim().split(" ");
   let cmd = args.shift()?.toLowerCase();
-  let cmds = args.shift()?.toLowerCase();
+  // let cmds = args.shift()?.toLowerCase();
   if (cmd === 'talk'){
     message.channel.send(`Yo ${message.author}, hoe gaat het bro?`);
   } else if (cmd === 'goed' | cmd === 'good'){
