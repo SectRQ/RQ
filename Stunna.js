@@ -78,12 +78,6 @@ client.on("messageCreate", async (message) => {
   
   let args = message.content.slice(config.prefix.length).trim().split(" ");
   let cmd = args.shift()?.toLowerCase();
-  while (true){
-    cmd === 'rip';{
-      message.channel.send(`COPE HARDER`)};
-      cmd++  
-    
-   }
   if (cmd === 'talk'){
     message.channel.send(`Yo ${message.author}, hoe gaat het bro?`);
   } else if (cmd === 'goed' | cmd === 'good'){
@@ -99,7 +93,7 @@ client.on("messageCreate", async (message) => {
         `${tMember.user} has been impregnated by ${message.author.username} :pregnant_woman::skin-tone-5:`,
         `${tMember.user} got raped by this lame ahh nigga called ${message.author.username} :skull:`,
         `${message.author.username} quit the gayshit coon, get sum bitches.`,
-        `...`
+        `Stop the fucking and start the hugging :tongue:`
     ]
       let randomA = answers[Math.floor(Math.random() * answers.length)];
     message.channel.send({
@@ -126,17 +120,14 @@ client.on("messageCreate", async (message) => {
         .setDescription(randomA)
     ]
   }) 
-}
-
-  
-  
-  if (cmd === "ping") {
-    message.channel.send(`>>> Ping :- \`${client.ws.ping}\``);
-  
-
+} else if (cmd === 'rip');{
+      message.channel.send(`COPE HARDER`)};
+      cmd++  
     
-  }
-  else if (cmd === "play" | cmd === "p") {
+
+
+  
+  if (cmd === "play" | cmd === "p") {
     let search = args.join(" ");
     let channel = message.member.voice.channel;
     let queue = distube.getQueue(message.guildId);
