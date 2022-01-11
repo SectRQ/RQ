@@ -122,7 +122,7 @@ client.on("messageCreate", async (message) => {
   }) 
 } if (cmds === 'rip');{
     message.channel.send(`COPE HARDER`)};
-    cmds++  
+   
     
 
 
