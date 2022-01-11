@@ -120,13 +120,6 @@ client.on("messageCreate", async (message) => {
         .setDescription(randomA)
     ]
   }) 
-} if (cmds === 'rip');{
-    message.channel.send(`COPE HARDER`) 
-  };
-   
-    
-
-
   
   if (cmd === "play" | cmd === "p") {
     let search = args.join(" ");
